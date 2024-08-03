@@ -15,7 +15,72 @@
 <link>https://eno.github.io/content/blog/</link>
 </image>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Wed, 10 Jul 2024 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 01 Aug 2024 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Персональная база знаний</title>
+  <link>https://eno.github.io/content/blog/posts/b2.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="персональная-база-знаний" class="level1">
+<h1>Персональная база знаний</h1>
+<p>В наши дни существуют множество инструментов для ведения заметок, такие как <em>Obsidian</em>, <em>Tana</em>, <em>Logseq</em>… <br> Инструменты различаются подходами ведения заметок, функционалом и не менее важным это “философией”. Одни инструменты открыты, другие хранят пользовательские заметки на серверах. Для некоторых последний критерий важен, в том числе и для меня</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Словарь">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Словарь
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>pkm</code> - управление личными знаниями (personal knowledge management)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="сравнение-инструментов" class="level1 page-columns page-full">
+<h1>Сравнение инструментов</h1>
+<p>Для меня важны следующие критерии: <br> 1. Инструмент должен быть открыт <sup>1</sup><br> 2. Все файлы а так же обработка должна находиться локально <sup>2</sup><br> 3. Наличие продвинутого графа <sup>3</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;исключает “сюрпризы” с лицензией, и ограничениям в зависимости от местоположения</p></div><div id="fn2"><p><sup>2</sup>&nbsp;дает возможность работать в автономном режиме</p></div><div id="fn3"><p><sup>3</sup>&nbsp;возможность визально филтровать связи заметок</p></div></div><section id="obsidian" class="level2">
+<h2 class="anchored" data-anchor-id="obsidian">Obsidian</h2>
+<p><em>Obsidian</em> - один из популярных инструментов для ведения заметок, хорошо подходит в качестве персональной базы знаний.<br> Плюсы:<br> - Работает быстро<br> - Имеет неплохую кастомизацию<br> - Имеет большое кол-во плагинов<br></p>
+<p>Минусы<br> - Закрытый код</p>
+</section>
+<section id="logseq" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="logseq">Logseq</h2>
+<p><em>Logseq</em> - инструмент с открытым исходным кодом, специализирующийся как инструмент для персональной базы знаний.<br> Плюсы: <br> - Имеет множество интересных функций такие как:<br> | + “обратные ссылки” <sup>4</sup><br> | + систему запроса (DataLog) <sup>5</sup><br> | + менеджер задач<br> - Не плохая кастомизация<br></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;отображение страниц которые ссылаются на текущую страницу</p></div><div id="fn5"><p><sup>5</sup>&nbsp;позволяет выполнять запросы к данным заметок для извлечения и анализа информации</p></div></div><p>Минусы:<br> - Небольшое кол-во плагинов</p>
+</section>
+<section id="tana" class="level2">
+<h2 class="anchored" data-anchor-id="tana">Tana</h2>
+<p><em>Tana</em> - это система управления знаниями, которая считается одним из самых продвинутых инструментов для <code>pkm</code><br> Я не использовал данный инструмент, в связи с тем, что он не соответствует моим требованиям.<br> Инструмент закрыт, пользовательские заметки хранятся на сервере данного приложения.</p>
+<p>Так что указать плюсы и минусы не смогу, только слышал что данный инструмент весьма хороший.</p>
+</section>
+</section>
+<section id="вывод" class="level1 page-columns page-full">
+<h1>Вывод</h1>
+<p>Исходя из моих критериев, фаворитом стал - <em>Emacs</em>, и его богатый <em>Org Mode</em>, который служит основой для ведения заметок. А пакет <strong>Org Roam</strong> дает возможность связать эти заметки превращая их в персональную базу знаний.<br> Все это локально, в простых текстовых файлах которые можно редактировать и просматривать в других программах</p>
+<p>Имея единый интерфейс (Emacs) я могу искать данные “не отходя от кассы” <sup>6</sup>, при этом можно строить граф с фильтрами (пакет <strong>Org Roam UI</strong>)</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;сразу в том же файле, вызываю команду которая ищет по содержимому или по названию заметок</p></div></div><p><img src="https://eno.github.io/content/blog/images/b2/Roam_UI.png" class="img-fluid"></p>
+<p>В дополнение, Emacs это отличный менеджер задач, который можно настроить для поиска задач в <strong>Org Roam</strong> базе, либо настроить отдельную папку, и руками вставлять внутренние ссылки на нужные разделы (заголовки).</p>
+<p>Как говориться - “на вкус и цвет”. <br> Для меня важно записать информацию и иметь возможность быстро к ней вернуться. Инструменты командной строки такие как: <strong>Grep|Ripgrep</strong> и <strong>fzf</strong> - очень хорошо с этим справляются, а <em>Emacs</em> обеспечивает удобный интерфейс для взаимодействия с данными утилитами</p>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Наверх</a> ]]></description>
+  <category>pkm</category>
+  <category>org</category>
+  <category>roam</category>
+  <guid>https://eno.github.io/content/blog/posts/b2.html</guid>
+  <pubDate>Thu, 01 Aug 2024 21:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Emacs против других IDE</title>
   <link>https://eno.github.io/content/blog/posts/b1.html</link>
@@ -51,7 +116,7 @@
 <section id="emacs-vs-ide" class="level1">
 <h1>Emacs VS IDE</h1>
 <p>Чем хуже <em>Emacs</em> в сравнении с популярными <strong>IDE</strong> (VSCode, JetBrains IDE’s и другими)<br> Если кратко, то хуже в удобстве из коробки. Современные IDE поставляют многое из коробки, а если в коробке нет то в расширениях в пару кликов все ставиться. В Emacs не всегда всё будет под руками, иногда нужно сходить в интернет и посмотреть какой нужен пакет, какие настройки.</p>
-<p>Но у Emacs есть неоспоримый перевес, Emacs - это тектовый редактор, я его отношу к группе приложений <strong><em>Notepad++</em></strong> и <strong><em>SublimeText</em></strong>, но с возможностью пакетами расширить функционал до полноценной IDE. Весь этот процесс перехода (TextEditor → IDE) и фильтр “что нужно включу, а что нет выключу” зависит от пользователя. Это дает существенный рост в оптимизации.<br> А такие инструменты как: макросы, регистры, шаблоны (пакет <del>yasnippet</del>) позволяют в некоторых направлениях существенно превосходить современные IDE.</p>
+<p>Но у Emacs есть неоспоримый перевес, Emacs - это тектовый редактор, я его отношу к группе приложений <strong>Notepad++</strong> и <strong>SublimeText</strong>, но с возможностью пакетами расширить функционал до полноценной IDE. Весь этот процесс перехода (TextEditor → IDE) и фильтр “что нужно включу, а что нет выключу” зависит от пользователя. Это дает существенный рост в оптимизации.<br> А такие инструменты как: макросы, регистры, шаблоны (пакет “yasnippet”) позволяют в некоторых направлениях существенно превосходить современные IDE.</p>
 </section>
 <section id="emacs-vs-vimnvim" class="level1">
 <h1>Emacs VS (Vim/Nvim)</h1>
@@ -59,8 +124,8 @@
 </section>
 <section id="заключение" class="level1">
 <h1>Заключение</h1>
-<p>Я использовал <strong><em>VSCode</em></strong>, <code>RStudio</code> а так же <strong>Nvim</strong> но <em>Emacs</em> существенно увеличил мою продуктивность, его мощные режимы отточенные десятилетиями включают в себя 99% того что мне нужно (а 1% так уж и быть, я допишу =).<br> Множество пакетов, единая экосистема, высокая оптимизация и свободный код - ставит Emacs выше конкурентов</p>
-<p>Как я использую Emacs:<br> Пишу на <em>Python</em>, <strong>R</strong>, <code>Go,</code> <strong><em>Quarto</em></strong>, к слову этот пост так же пишу в Emacs, пишу конфигурации в Org режиме, и часто бегаю по файлам в файловом менеджере Emacs! <br>Моя персональная база знаний pkm в Emacs (пакет <del>org-roam</del> и <del>org-roam-ui</del>), а так же использую agenda как менеджер задач, читаю книги в pdf в настроенной тёмной теме (не инвертированной, а настроенной цвет фона и текста в ручную, пакет <del>pdf-tools</del>, который дает возможность аннотировать).</p>
+<p>Я использовал <strong>VSCode</strong>, <strong>RStudio</strong> а так же <strong>Nvim</strong> но <em>Emacs</em> существенно увеличил мою продуктивность, его мощные режимы отточенные десятилетиями включают в себя 99% того что мне нужно (а 1% так уж и быть, я допишу =).<br> Множество пакетов, единая экосистема, высокая оптимизация и свободный код - ставит Emacs выше конкурентов</p>
+<p>Как я использую Emacs:<br> Пишу на <em>Python</em>, <em>R</em>, <em>Go</em>, <em>Quarto</em>, к слову этот пост так же пишу в Emacs, пишу конфигурации в Org режиме, и часто бегаю по файлам в файловом менеджере Emacs! <br>Моя персональная база знаний pkm в Emacs (пакет <strong>org-roam</strong> и <strong>org-roam-ui</strong>), а так же использую agenda как менеджер задач, читаю книги в pdf в настроенной тёмной теме (не инвертированной, а настроенной цвет фона и текста в ручную, пакет <strong>pdf-tools</strong>, который дает возможность аннотировать).</p>
 <p>Могу продолжать дальше, но пусть эти “открытия” (в каких областях еще можно использовать Emacs) останутся для тех кто все же решиться его попробовать<br></p>
 <p>И все это в одной программе, которая запускается за <strong><em>0.45сек</em></strong> и занимает <strong><em>~90мб</em></strong>!<br> Да… Умели раньше делать софт=)</p>
 <p>Мой внешний вид Emacs (ночная / дневная тема)</p>

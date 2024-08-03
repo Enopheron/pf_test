@@ -226,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>В данной статье в вкратце описываются функции пакета <strong><em>openxlsx</em></strong>.<br> Ниже приведен пример взаимодействия функций и итоговый результат экспорта таблицы из <strong>R</strong> → <em>xlsx</em></p>
+<p>В данной статье в вкратце описываются функции пакета <strong>openxlsx</strong>.<br> Ниже приведен пример взаимодействия функций и итоговый результат экспорта таблицы из <em>R</em> → <strong>xlsx</strong></p>
 </div>
 </div>
 <section id="библиотеки-и-стили" class="level1">
@@ -259,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="книга-и-опции" class="level1">
 <h1>Книга и опции</h1>
-<p>Создаем книгу (объект в ram) и страницу в этой книге с названием <em>Продажи</em>, к которой применяем несколько опций:<br> - <strong><em>orientation</em></strong> :: <em>‘portrait’</em> - указывает ореинтацию бумаги (опция для печати на бумагу)<br> - <strong>pageSetup</strong> :: параметры для отступа от краев страницы (помогает вместить больше информации на слит при печати на бумагу)</p>
+<p>Создаем книгу (объект в ram) и страницу в этой книге с названием <em>Продажи</em>, к которой применяем несколько опций:<br> - <strong><em>orientation</em></strong> :: <strong><em>portrait</em></strong> - указывает ореинтацию бумаги (опция для печати на бумагу)<br> - <strong><em>pageSetup</em></strong> :: параметры для отступа от краев страницы (помогает вместить больше информации на слит при печати на бумагу)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## создаем книгу</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>wb <span class="ot">&lt;-</span> <span class="fu">createWorkbook</span>()</span>
@@ -274,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="запись-и-кастомизация" class="level1">
 <h1>Запись и кастомизация</h1>
 <ol type="1">
-<li><strong>mergeCells</strong> - соединяет ячейки (диапазон соединения определяется автоматически)<br> <del>cols = 1:length(fin_sales)</del><br></li>
+<li><strong>mergeCells</strong> - соединяет ячейки (диапазон соединения определяется автоматически)<br> <strong><em>cols = 1:length(fin_sales)</em></strong><br></li>
 <li><strong>addStyle</strong> - применяет стиль “st_name” к указанной области<br></li>
 <li><strong>setColWidths</strong> - устанавливает ширену колонки</li>
 </ol>
@@ -750,7 +750,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../../../Владимир_Владимирович+enopheron@yandex.ru">
+    <a class="nav-link" href="https://t.me/Enopheron">
+      <i class="bi bi-telegram" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://wa.me/qr/32H5IS4TCN4SD1">
+      <i class="bi bi-whatsapp" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:Владимир_Владимирович+enopheron@yandex.ru">
       <i class="bi bi-envelope" role="img">
 </i> 
     </a>
@@ -758,8 +770,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
     </div>
     <div class="nav-footer-right">
-<p>Version 1.0.0</p>
-</div>
+      &nbsp;
+    </div>
   </div>
 </footer>
 

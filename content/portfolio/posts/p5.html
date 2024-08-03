@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="импорт-и-настройки" class="level1">
 <h1>Импорт и настройки</h1>
 <p>Основными библиотеками для парсинга выступают:<br> 1. <em>requests</em> - делает запрос на сайт и получает данные<br> 2. <em>bs4</em> (<strong>BeautifulSoup</strong>) - парсит результат запроса <em>requests</em></p>
-<div id="eaf46638" class="cell" data-execution_count="1">
+<div id="bb24467b" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -258,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Создаем пустую таблицу, в эту таблицу будет добавляться найденная информация о вакансиях</li>
 <li>Стартовая страница запроса, эта строка учитывает указанные фильтры на hh, то есть, можно перейти на hh, указать критерии поиска, выбрать фильтры, а после скопировать ссылку и вставить в скрипт</li>
-<li>Эта ссылка служит основной для перехода, что бы перейти на вторую страницу нужно к ссылке добавить ddd <del>page=номерстраницы</del>, я использую код <del>url=f’{start_url}&amp;page={p}’</del> который имеет константу страницы <em>start_url</em>, и конкатинацию в зависимости от итерации цикла</li>
+<li>Эта ссылка служит основной для перехода, что бы перейти на вторую страницу нужно к ссылке добавить <strong><em>page=номер страницы</em></strong>, я использую код <strong><em>url=f’{start_url}&amp;page={p}’</em></strong> который имеет константу страницы <em>start_url</em>, и конкатинацию в зависимости от итерации цикла</li>
 <li>Эти настройки нужны при запросе <strong>requests.get()</strong>, для имитации, что запрос на страницу делает пользователь, когда сайт запрашивает данные, мы ему предоставляем данные из этого списка</li>
 <li>Ключевые слова, которые скрипт будет искать на страницах вакансий</li>
 </ol>
@@ -266,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="проверка-полученной-страницы-вакансия" class="level1">
 <h1>Проверка полученной страницы (вакансия)</h1>
 <p>При запросе страницы бывает приходит страница не полная, у которой нет части данных. Эта функция проверяет наличие данных, если они не полные то делает запрос повторно</p>
-<div id="85db0c62" class="cell" data-execution_count="2">
+<div id="b87e42f2" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_correctly(url):</span>
@@ -282,9 +282,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ol type="1">
 <li>Если данные приходят не полные, то повторяем запрос</li>
-<li>Сам запрос на получение данных с сайта, <strong><em>url</em></strong> - ссылка данные которой запрашиваем, <strong><em>headers</em></strong> - это имитация пользователя которая создавалась ранее</li>
+<li>Сам запрос на получение данных с сайта, <em>url</em> - ссылка данные которой запрашиваем, <em>headers</em> - это имитация пользователя которая создавалась ранее</li>
 <li>Парсим полученный объект (теперь в этой переменной лежит “грубо говоря” html страница), которую можно парсить. Преимущество в том, что при тестах не делается запрос на сайт</li>
-<li>Ищем <em>div</em> <em>class</em> с названием <em>vacancy-title</em></li>
+<li>Ищем <strong><em>div</em></strong> <strong><em>class</em></strong> с названием <strong>vacancy-title</strong></li>
 <li>Проверяем переменную <em>header</em>,(для чего ? читай описание заголовка), если мы получили полную страницу</li>
 <li>вызываем функцию и передаем <em>url</em> - ссылку, <em>soup</em> - локальную html, <em>response</em> - для поиска слов по всей странице</li>
 </ol>
@@ -292,7 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="сканирование-вакансии" class="level1">
 <h1>Сканирование вакансии</h1>
 <p>Эта функция извлекает нужные данные страницы</p>
-<div id="a29535ad" class="cell" data-execution_count="3">
+<div id="362b6fa5" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> visit_and_check(url, soup, response):</span>
@@ -342,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol></li>
 <li>Извлекаем header</li>
 <li>Получаем название вакансии</li>
-<li>Получаем ставку (указанную зарплату)` Есть вакансии на которых указанной зарплаты нет, а бывают случаи когда указан диапазон от…до, такие моменты обрабатываю ниже
+<li>Получаем ставку (указанную зарплату)` Примечание: есть вакансии на которых указанной зарплаты нет, а бывают случаи когда указан диапазон от…до, такие моменты обрабатываю ниже
 <ol type="1">
 <li>проверяем, указана зарплата</li>
 <li>регулярным выражением ищем только число (убираем символы)</li>
@@ -355,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="переход-по-страницам-и-поиск-ссылок" class="level1">
 <h1>Переход по страницам и поиск ссылок</h1>
 <p>Этот цикл сканирует главные страницы (на которых находятся вакансии), в зависимости от итерации переходит по страницам 2,3,4… на самом сайте</p>
-<div id="b8c2d725" class="cell" data-execution_count="4">
+<div id="d12cc446" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> p <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">9</span>):              <span class="co"># 1</span></span>
@@ -382,20 +382,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Если это не первая итерация цикла, то к ссылке добавляем page и цифру страницы (цифру итерации цикла)</li>
 <li>Бывает hh.ru возвращает не полную страницу, в этом цикле проверяем корректность полученной страницы, если она не полная повторяем запрос вплоть до получения полной страницы или в плоть до числа в функции <strong>range()</strong></li>
 <li>Перед каждым новым запросом немного ждем, что бы не DDOSить сайт, все таки цель получить данные, имитируем простой переход</li>
-<li>Сам запрос на получение данных с сайта, <strong><em>url</em></strong> - ссылка данные которой запрашиваем, <strong><em>headers</em></strong> - это имитация пользователя которая создавалась ранее</li>
+<li>Сам запрос на получение данных с сайта, <em>url</em> - ссылка данные которой запрашиваем, <em>headers</em> - это имитация пользователя которая создавалась ранее</li>
 <li>Парсим полученный объект (теперь в этой переменной лежит “грубо говоря” html страница), которую можно парсить. Преимущество в том, что при тестах не делается запрос на сайт</li>
 <li>Проверяем полученную страницу, если она не полная то делаем запрос еще раз (переходим на новую итерацию)</li>
 <li>Если страница полная, извлекаем h2 (заголовок вакансии)</li>
 <li>В этом заголовке ищем ссылку на вакансию</li>
 <li>Из этой ссылки делаем абсолютный путь (полную ссылку на вакансию)</li>
 <li>Передаем ссылку на вакансию в переменную проверки</li>
-<li>На данном этапе то как мы попали в <del>if soup.find all(‘h2’)</del>, значит мы получили полную ссылку на страницу, делать новый запрос по той же ссылке не нужно</li>
+<li>На данном этапе то как мы попали в <strong><em>if soup.find all(‘h2’)</em></strong>, значит мы получили полную ссылку на страницу, делать новый запрос по той же ссылке не нужно</li>
 </ol>
 </section>
 <section id="сохранить" class="level1">
 <h1>Сохранить</h1>
 <p>Сохраняем результат в <em>xlsx</em> файл</p>
-<div id="dc5e6045" class="cell" data-execution_count="5">
+<div id="c626dcaa" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>wb <span class="op">=</span> xlsxwriter.Workbook(<span class="st">'Output.xlsx'</span>)</span>
@@ -848,7 +848,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../../../Владимир_Владимирович+enopheron@yandex.ru">
+    <a class="nav-link" href="https://t.me/Enopheron">
+      <i class="bi bi-telegram" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://wa.me/qr/32H5IS4TCN4SD1">
+      <i class="bi bi-whatsapp" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:Владимир_Владимирович+enopheron@yandex.ru">
       <i class="bi bi-envelope" role="img">
 </i> 
     </a>
@@ -856,8 +868,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
     </div>
     <div class="nav-footer-right">
-<p>Version 1.0.0</p>
-</div>
+      &nbsp;
+    </div>
   </div>
 </footer>
 

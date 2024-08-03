@@ -34,46 +34,34 @@ p {
     text-align: left;
 }
 
-  /* **  */
-em {
-    color: #1c7046;
-    text-decoration: none;
-    font-style: normal;
-}
-
-i, del {
-    color: #606060;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
-}
-
-em code {
-    color: #8404a6;
-}
-
-/* ******  */
-strong em {
-  color: #657422;
-}
-
-/* ****  */
-strong {
-    color: #4758AB;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-
-/* ``  */
-code {
-    color: #cf8427;
-    font-size: 1em;
+em, code, strong {
     font-family: "JetBrainsMono Nerd Font", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     text-decoration: none;
-  
+    font-size: 1em;	
+}
+
+em {
+    color: #b129cc;
+}
+
+strong em {
+    color: #606060;
+    font-weight: normal;
+    background-color: #eeeeee;
+    border-radius: 0.3em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    
+}
+
+strong {
+    color: #2996cc;
+}
+
+code {
+    color: #cc7b29;
 }
 
 dt {
