@@ -10,7 +10,7 @@
 <atom:link href="https://eno.github.io/content/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Портфолио</description>
 <image>
-<url>https://eno.github.io/images/profile.png</url>
+<url>https://eno.github.io/assets/images/profile.png</url>
 <title>Владимир Шевченко</title>
 <link>https://eno.github.io/content/blog/</link>
 </image>

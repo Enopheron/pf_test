@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../images/icons/favicon.ico" rel="icon">
+<link href="../../../_assets/images/icons/favicon.ico" rel="icon">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="импорт-и-настройки" class="level1">
 <h1>Импорт и настройки</h1>
 <p>Основными библиотеками для парсинга выступают:<br> 1. <em>requests</em> - делает запрос на сайт и получает данные<br> 2. <em>bs4</em> (<strong>BeautifulSoup</strong>) - парсит результат запроса <em>requests</em></p>
-<div id="bb24467b" class="cell" data-execution_count="1">
+<div id="f3d06e02" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
@@ -266,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="проверка-полученной-страницы-вакансия" class="level1">
 <h1>Проверка полученной страницы (вакансия)</h1>
 <p>При запросе страницы бывает приходит страница не полная, у которой нет части данных. Эта функция проверяет наличие данных, если они не полные то делает запрос повторно</p>
-<div id="b87e42f2" class="cell" data-execution_count="2">
+<div id="e35b00ec" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_correctly(url):</span>
@@ -292,7 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="сканирование-вакансии" class="level1">
 <h1>Сканирование вакансии</h1>
 <p>Эта функция извлекает нужные данные страницы</p>
-<div id="362b6fa5" class="cell" data-execution_count="3">
+<div id="03bf0392" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> visit_and_check(url, soup, response):</span>
@@ -355,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="переход-по-страницам-и-поиск-ссылок" class="level1">
 <h1>Переход по страницам и поиск ссылок</h1>
 <p>Этот цикл сканирует главные страницы (на которых находятся вакансии), в зависимости от итерации переходит по страницам 2,3,4… на самом сайте</p>
-<div id="d12cc446" class="cell" data-execution_count="4">
+<div id="ee91aa5d" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> p <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">9</span>):              <span class="co"># 1</span></span>
@@ -395,7 +395,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="сохранить" class="level1">
 <h1>Сохранить</h1>
 <p>Сохраняем результат в <em>xlsx</em> файл</p>
-<div id="c626dcaa" class="cell" data-execution_count="5">
+<div id="c0779e95" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Код</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>wb <span class="op">=</span> xlsxwriter.Workbook(<span class="st">'Output.xlsx'</span>)</span>
